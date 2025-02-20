@@ -66,6 +66,7 @@ export const MonacoEditorReactComp: React.FC<MonacoEditorProps> = (props) => {
         };
 
         (async () => {
+            await destroyMonaco();
             await initMonaco();
             await startMonaco();
         })();
